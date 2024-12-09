@@ -20,7 +20,6 @@ with open("day7_input.txt") as txt_file:
         value, raw_equation = line.strip().split(": ")
         value = int(value)
         equation = list(map(int, raw_equation.split(" ")))
-        print(value, equation)
         if compute_equation(value, equation):
             calibration_result += value
 print(calibration_result)
