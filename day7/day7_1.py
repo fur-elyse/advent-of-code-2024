@@ -2,10 +2,13 @@ def compute_equation(value, numbers):
     if numbers[0] > value:
         return False
     if len(numbers) == 1:
-        return numbers[0] == value
-    if (compute_equation(value, [numbers[0] + numbers[1]] + numbers[2:])):
+        if numbers[0] == value:
+            return True
+        else:
+            return False
+    if compute_equation(value, [numbers[0] + numbers[1]] + numbers[2:]):
         return True
-    if (compute_equation(value, [numbers[0] * numbers[1]] + numbers[2:])):
+    if compute_equation(value, [numbers[0] * numbers[1]] + numbers[2:]):
         return True
     return False
 
