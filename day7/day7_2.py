@@ -1,8 +1,8 @@
 def compute_equation(value, numbers):
     if numbers[0] > value:
         return False
-    if len(numbers) == 1:
-        return numbers[0] == value
+    if len(numbers) and numbers[0] == value:
+        return True
     if (compute_equation(value, [numbers[0] + numbers[1]] + numbers[2:])):
         return True
     if (compute_equation(value, [numbers[0] * numbers[1]] + numbers[2:])):
