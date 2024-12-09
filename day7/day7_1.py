@@ -12,8 +12,8 @@ def compute_equation(value, numbers):
 
 calibration_result = 0
 
-with open("day7_input.txt") as r:
-    for line in r:
+with open("day7_input.txt") as txt_file:
+    for line in txt_file:
         value, raw_equation = line.strip().split(": ")
         value = int(value)
         equation = list(map(int, raw_equation.split(" ")))
